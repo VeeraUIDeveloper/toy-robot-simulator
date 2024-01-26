@@ -1,0 +1,59 @@
+body {
+  padding: 20px;
+  margin: 20px;
+}
+.tabletop {
+  display: grid;
+  grid-template-columns: repeat(5, 50px);
+  grid-template-rows: repeat(5, 50px);
+  gap: 2px;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ccc;
+  position: relative;
+}
+
+input,
+button {
+  padding: 7px;
+  margin-right: 5px;
+}
+.robot {
+  background-color: black;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.arrow.north {
+  border-bottom: 15px solid yellow;
+}
+
+.arrow.south {
+  border-top: 15px solid yellow;
+}
+
+.arrow.east {
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid yellow;
+  /* left: 60%; */
+}
+
+.arrow.west {
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 15px solid yellow;
+  /* left: 40%; */
+}
